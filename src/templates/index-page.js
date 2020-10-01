@@ -44,7 +44,7 @@ const IndexPage = ({ data, location }) => {
                   style={{ animationDelay: `${index * 100 + 200}ms` }}
                 >
                   <Link
-                    className="flex items-center py-8 xs:py-4 w-full"
+                    className="flex items-center py-8 xs:py-4 w-full no-underline text-black"
                     to={slug}
                   >
                     <span className="f5 mx-4">~</span>

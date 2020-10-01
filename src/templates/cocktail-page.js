@@ -46,7 +46,7 @@ const CocktailPage = ({ data, location }) => {
               {ingredients.map((ingredient, index) => {
                 const key = `${index}-${ingredient}`;
                 return (
-                  <li className="my-2" key={key}>
+                  <li className="my-2 b1" key={key}>
                     {ingredient.ingredient}
                   </li>
                 );
@@ -60,7 +60,7 @@ const CocktailPage = ({ data, location }) => {
               {methods.map((method, index) => {
                 const key = `${index}-${method}`;
                 return (
-                  <li className="my-2" key={key}>
+                  <li className="my-2 b1" key={key}>
                     {method.method}
                   </li>
                 );
