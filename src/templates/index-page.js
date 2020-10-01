@@ -3,12 +3,9 @@
 
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
-import ReactMarkdown from "react-markdown";
 
 import Arrow from "~components/svg/Arrow";
 import Layout from "~components/Layout";
-
 import SEO from "~components/SEO";
 
 const IndexPage = ({ data, location }) => {

@@ -85,7 +85,7 @@ module.exports = {
     keywords: `drunk`,
     author: `sbailouni@gmail.com`,
     url: ``,
-    image: `/images/site-image.svg`,
+    image: `/images/site-image.jpg`,
     twitterUsername: `@seba1342`
   },
   plugins: [
