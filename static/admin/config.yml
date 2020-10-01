@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  repo: seba1342/letsgetpissed
+  branch: master
+
+local_backend: true
+
+site_url: https://letsgetpissed.netlify.app
+
+media_folder: /static/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Pages
+    preview_path: /{{slug}}
+    editor:
+      preview: false
+    files:
+      - file: src/pages/index.md
+        label: Home
+        name: home
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: index-page
+
+          - label: Title
+            name: title
+            widget: string
+            hint: This is used both by the title meta tag and the <h1> tag in the HTML.
+
+          - label: SEO Description
+            name: seoDescription
+            required: false
+            widget: string
+            hint: This is used by the description meta tag.
+
+          - label: SEO Keywords
+            name: seoKeywords
+            required: false
+            widget: string
+            hint: This is used by the keywords meta tag.
+
+  - name: "cocktails"
+    label: "Cocktails"
+    label_singular: "Cocktail"
+    folder: "src/pages/cocktails"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: "Template Key"
+        name: "templateKey"
+        widget: "hidden"
+        default: "cocktail-page"
+
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+
+      - label: "description"
+        name: "description"
+        widget: "markdown"
+        required: false
+
+      - label: "Ingredients"
+        name: "ingredients"
+        widget: "list"
+        fields:
+          - label: "Ingredient"
+            name: "ingredient"
+            widget: "text"
+
+      - label: "Methods"
+        name: "methods"
+        widget: "list"
+        fields:
+          - label: "Method"
+            name: "method"
+            widget: "text"
+
+      - label: "SEO Description"
+        name: "seoDescription"
+        required: false
+        widget: "string"
+
+      - label: "SEO Keywords"
+        name: "seoKeywords"
+        required: false
+        widget: "string"

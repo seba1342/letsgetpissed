@@ -1,0 +1,9 @@
+.cocktail-page {
+  &__menu {
+    @include md {
+      min-height: 800px;
+    }
+
+    min-height: 1000px;
+  }
+}
